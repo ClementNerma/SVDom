@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>JDom Library Test</title>
+</head>
+<body>
+  <!-- Load SVDom library -->
+  <script type="text/javascript" src="../svdom.js"></script>
+  <!-- Test script -->
+  <script type="text/javascript">
+    // Make a new SVDom document with an initial HTML content
+    const doc = new SVDocument();
+
+    // Then give it to a close as a 'document' variable
+    (function (document) {
+      // Add a title to the page
+      document.body.innerHTML = '<h2>Panthers are pink</h2>';
+      // Append it to the page's <body>
+      document.appendTo(window.document.body);
+      // Put a border on it
+      document.body.style.border = '1px solid black';
+      // Add an element after the header
+      document.body.insertBefore(document.createElement('h1'), document.querySelector('h2'));
+      // Get the main header
+      let header = document.querySelector('h1');
+      // Set it a text
+      header.innerHTML = 'I really think that...';
+      // Set the <body> pink-colored
+      document.body.style.backgroundColor = 'pink';
+      document.body.style.color = 'gray';
+      // Set a padding
+      document.body.style.padding = '15px';
+      // Also, center the text
+      document.body.style.textAlign = 'center';
+      // Now, if we take the header's parent, it should be the body element
+      console.log(document.body === header.parentElement); // False, because that's two different instances
+      console.log(document.body.is(header.parentElement)); // True
+      // But, if we try to get the body's parent, which is the real <body> tag :
+      // (the document.body refers to doc.body which refers to the <div> which
+      //  is only a child of the real <body>)
+      console.log(document.body.parentElement); // NULL
+      // We can't get the parent of the top-level element
+      // Also, if we try to create a <script> element...
+      console.log(document.createElement('script')); // FALSE
+      // The creation is refused.
+    })(doc);
+  </script>
+</body>
+</html>
