@@ -16,7 +16,7 @@ Then, you can create a document and manipulate it without caring of the content 
 
 ```javascript
 // Create a new document
-const doc = new JDocument();
+const doc = new SVDocument();
 // Inject a malicious code
 doc.body.innerHTML = '<script type="text/javascript">alert("Malicious code worked!");</script>'; // Does nothing
 // Create a script element
