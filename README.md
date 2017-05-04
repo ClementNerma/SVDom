@@ -42,7 +42,7 @@ To prevent that problem, the Virtual DOM is constitued of an `iframe` element, a
 
 ## Demo
 
-You can check the `test/index.html` file in the repository to see SVDom in action.
+You can check the `test/index.html` file in the repository to see SVDom in action (you can see it online at [this adress](https://clementnerma.github.io/SVDom/test/index.html)).
 
 # License
 
