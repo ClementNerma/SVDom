@@ -46,8 +46,10 @@ You can check the `test/index.html` file in the repository to see SVDom in actio
 
 # License
 
-This project is released under the [Creative Commons Attribution BY-NC-ND 4.0 International](https://creativecommons.org/licenses/by-nc-nd/4.0/) license.
-The license of the project may change on the future and it will maybe release using the GPL license in a future version.
+~~This project is released under the [Creative Commons Attribution BY-NC-ND 4.0 International](https://creativecommons.org/licenses/by-nc-nd/4.0/) license.~~
+~~The license of the project may change on the future and it will maybe release using the GPL license in a future version.~~
+
+This project is now released under the [GNU GPL license](LICENSE.md) terms.
 
 # Disclaimer
 
